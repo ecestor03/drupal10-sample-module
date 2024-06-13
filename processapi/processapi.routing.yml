@@ -1,0 +1,24 @@
+processapi.default_controller:
+  path: '/admin/processapi_demo'
+  defaults:
+    _form: 'Drupal\processapi\Form\ConfigFormProcessapi'
+    # _controller: '\Drupal\processapi\Controller\ProcessapiController::content'
+    _title: 'Process API Demo'
+  requirements:
+    _role: 'administrator'
+
+processapi.startprocessapi:
+  path: '/admin/processapistart_demo/{filename}'
+  defaults:
+    _controller: '\Drupal\processapi\Controller\processapiController::internalapiprocess'
+    _title: 'Process API Demo'
+  requirements:
+    _role: 'administrator'
+    
+processapi.createapi:
+  path: '/processapi_apidemo'
+  defaults:
+    _controller: '\Drupal\processapi\Controller\processapiController::createapi'
+    _title: 'Create API Demo'
+  requirements:
+      _access: 'TRUE'   

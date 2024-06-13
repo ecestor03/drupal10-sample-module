@@ -1,0 +1,9 @@
+name: Process API demo module
+description: Create page in drupal 10 which process data from csv to REST API.
+package: Custom
+type: module
+version: 1.0
+core: 10.x
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:views

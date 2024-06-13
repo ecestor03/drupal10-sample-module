@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Contains processapi.module.
+ */
+
+ use Drupal\Core\Form\FormStateInterface;
+ 
+/**
+ * Provides additional expansion if you want to create a landing page.
+ * You can create a processAPI Theme and use this hook_theme to call your theme.
+ * Implements hook_theme().
+ */
+function processapi_theme($existing, $type, $theme, $path){
+
+    return [
+        'processapi_theme' => [
+            'variables' => [
+              'processAPIdata' => array(),
+              'processapiCntr' => NULL,
+            ],
+            'render element' => 'form',
+            'template' => 'processapi-theme',
+        ]
+    ];
+}
